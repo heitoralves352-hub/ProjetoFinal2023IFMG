@@ -71,6 +71,13 @@ public class ctrlProduto {
     }
      public DefaultTableModel PesquisaObjeto(ArrayList<String> Parametros, DefaultTableModel ModeloTabela) {
         String Campo = Parametros.get(0);
+        switch (Campo) {
+            case "Nome":              Campo = "produto.nome";         break;
+            case "Codigo":            Campo = "produto.codigo";       break;
+            case "Categoria":         Campo = "produto.codcategoria"; break;
+            case "Preço":             Campo = "produto.preco";        break;
+            case "Nome da Categoria": Campo = "categoria.nome";       break;
+        }
         String Valor = Parametros.get(1);
 
         ArrayList<Produto> Clientes = this.objProduto.RecuperaObjetos(Campo, Valor);

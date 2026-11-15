@@ -67,7 +67,7 @@ public class VPesqFuncionario extends javax.swing.JDialog {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Opções de Pesquisa:"));
 
-        cmbopc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código", "Nome", "Email", "CPF", " " }));
+        cmbopc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Código", "Nome", "Email", "CPF" }));
         cmbopc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbopcActionPerformed(evt);

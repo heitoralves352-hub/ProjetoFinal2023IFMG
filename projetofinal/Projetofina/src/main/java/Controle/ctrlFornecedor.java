@@ -67,6 +67,11 @@ public class ctrlFornecedor {
     
      public DefaultTableModel PesquisaObjeto(ArrayList<String> Parametros, DefaultTableModel ModeloTabela) {
         String Campo = Parametros.get(0);
+        switch (Campo) {
+            case "Código":    Campo = "codigo";    break;
+            case "Descrição": Campo = "descricao"; break;
+            case "Endereço":  Campo = "endereco";  break;
+        }
         String Valor = Parametros.get(1);
 
         ArrayList<Fornecedor> Fornecedores = this.objFornecedor.RecuperaObjetos(Campo, Valor);

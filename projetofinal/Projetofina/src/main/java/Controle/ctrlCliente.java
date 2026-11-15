@@ -65,6 +65,11 @@ public class ctrlCliente {
     
     public DefaultTableModel PesquisaObjeto(ArrayList<String> Parametros, DefaultTableModel ModeloTabela) {
         String Campo = Parametros.get(0);
+        switch (Campo) {
+            case "Código":    Campo = "codigo";    break;
+            case "Descrição": Campo = "descricao"; break;
+            case "Endereço":  Campo = "endereco";  break;
+        }
         String Valor = Parametros.get(1);
 
         ArrayList<Cliente> Clientes = this.objCliente.RecuperaObjetos(Campo, Valor);

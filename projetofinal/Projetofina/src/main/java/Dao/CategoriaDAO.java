@@ -107,9 +107,9 @@ public class CategoriaDAO {
         try {
             
             insereSt = conexao.prepareStatement(sql);
-            insereSt.setInt(0, categoria.getCodigo());
-            insereSt.setString(1, categoria.getNome());
-            insereSt.setString(2, categoria.getDescricao());
+            insereSt.setInt(1, categoria.getCodigo());
+            insereSt.setString(2, categoria.getNome());
+            insereSt.setString(3, categoria.getDescricao());
             insereSt.executeUpdate();
             
         } catch (SQLException e) {
